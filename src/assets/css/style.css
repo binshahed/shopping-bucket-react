@@ -1,0 +1,256 @@
+/* Variables */
+
+:root {
+	/* Font Families */
+	--brand-font-family: 'Montserrat', sans-serif;
+	--text-font-family: 'Roboto', sans-serif;
+
+	/* Colors */
+	--page-color: #f5f5f5;
+	--section-color: #ffffff;
+	--nav-color: #333333;
+	--nav-text-color: #ffffff;
+	--font-color: #424242;
+	--brand-color: #424242;
+	--font-color-secondary: #666666;
+	--border-color: #efefef;
+	--table-stripe-color: #f1f1f1;
+	--table-striped-color-success: #eafdd0;
+	--completed-table-header-color: #4a8d47;
+	--completed-table-header-font-color: #ffffff;
+	--completed-table-cell-color: #f2fde4;
+
+	/* Font Sizes */
+	--font-size-brand: 1.5rem;
+	--font-size-text: 1rem;
+	--font-size-title-sm: 1.25rem;
+	--font-size-title-md: 1.5rem;
+	--font-size-title-lg: 1.75rem;
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	font-family: var(--text-font-family);
+	font-size: var(--font-size-text);
+	color: var(--font-color);
+	background-color: var(--page-color);
+	margin-bottom: 5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 500;
+}
+h1 {
+	font-size: var(--font-size-title-lg);
+}
+h2 {
+	font-size: var(--font-size-title-md);
+}
+h3 {
+	font-size: var(--font-size-title-sm);
+}
+p {
+	font-size: var(--font-size-text);
+	color: var(--font-color-secondary);
+	line-height: 1.2;
+}
+
+/* Styles For Navigation Section of Home Page */
+
+.nav {
+	width: 100%;
+	background-color: var(--nav-color);
+	color: var(--nav-text-color);
+}
+.container {
+	width: 60%;
+	min-width: 500px;
+	margin: 0 auto;
+}
+
+.nav__container {
+	display: flex;
+	align-items: center;
+	padding: 0.5rem 0;
+}
+
+.nav__brand {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.nav__brand-logo {
+	width: 3rem;
+	height: auto;
+}
+
+.nav__brand-name {
+	font-family: var(--text-font-family);
+	font-size: var(--font-size-brand);
+	margin-left: 1rem;
+}
+.nav__menu {
+	margin-left: auto;
+}
+
+.nav__menu-icon {
+	width: 20px;
+	height: auto;
+	cursor: pointer;
+}
+
+
+.section {
+	width: 100%;
+	border-radius: 0.2rem;
+	background-color: var(--section-color);
+	margin-top: 2rem;
+	box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+/*Add Item Input Section*/
+.add-item__input {
+	width: 100%;
+	padding: 1.5rem 2rem;
+	display: flex;
+	align-items: center;
+}
+
+.add-item__icon {
+	width: 16px;
+	height: auto;
+}
+
+.add-item__input-field {
+	width: 100%;
+	margin-left: 1rem;
+	border: none;
+	outline: none;
+	font-size: 1rem;
+	color: var(--font-color-secondary);
+}
+
+/* BEM Tables */
+
+.table {
+	margin-top: 1rem;
+}
+
+.table__table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	text-align: left;
+}
+
+.table__thead {
+	color: var(--font-color-secondary);
+	border-bottom: 1px solid var(--border-color);
+}
+
+.table th {
+	padding: 1.5rem 2rem;
+	width: 25%;
+	max-width: 25%;
+}
+
+.table__item-input {
+	color: var(--font-color-secondary);
+}
+
+.table--success .table__thead {
+		background-color: var(--completed-table-header-color);
+		color: var(--completed-table-header-font-color);
+}
+.table--success .table__tbody {
+	background-color: var(--completed-table-cell-color);
+}
+
+.table--success .table__tbody tr:nth-child(even) {
+	background-color: var(--table-striped-color-success);
+}
+
+.icon-button {
+	border: none;
+	outline: none;
+	background: transparent;
+	cursor: pointer;
+	width: 1.75rem;
+	height: 1.75rem;
+}
+
+.icon-button__icon {
+	width: 100%;
+	height: auto;
+}
+
+/* Add Item Sugesstion Chips */
+
+.add-item__sugestions {
+	display: flex;
+	padding: 0.8rem 2rem;
+	align-items: center;
+}
+
+.add-item__sugestions-control {
+	min-width: 30px;
+	min-height: 30px;
+	border-radius: 50%;
+	background-color: white;
+	box-shadow: 0 0 5px 1px rgba(0,0,0,0.1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.add-item__sugestions-control-icon {
+	width: 15px;
+	height: auto;
+}
+
+.add-item-sugestions-chips{
+	display: inline-flex;
+	margin: 0 1.5rem;
+	gap: 1rem;
+	overflow: hidden;
+}
+
+.add-item__sugestions-chip-item {
+	padding: 0.5rem;
+	background-color: white;
+	border-radius: 0.25rem;
+	border: 1px solid var(--border-color);
+	cursor: pointer;
+}
+
+.horizontal-line {
+	width: 100%;
+	height: 0;
+	border-bottom: 1px solid var(--border-color);
+}
+/* Utilities */
+
+.align-right {
+	text-align: right;
+}
+
+.table .custom-th {
+	padding-left: 11.5rem;
+}
+
+.text-secondary {
+	color: var(--font-color-secondary);
+}
