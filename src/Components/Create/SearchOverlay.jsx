@@ -1,7 +1,7 @@
 import plusIcon from "../../assets/icons/plus-icon.png";
 
 
-const FilterOverlay = () => {
+const SearchOverlay = () => {
     return (
         <div className='add-item__filter-overlay hide'>
 			<ul className='add-item__filter-list'>
@@ -90,4 +90,4 @@ const FilterOverlay = () => {
     );
 };
 
-export default FilterOverlay;
+export default SearchOverlay;

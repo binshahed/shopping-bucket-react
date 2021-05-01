@@ -1,7 +1,7 @@
-import brandLogo from "../../assets/brand-logo/brand-logo.svg";
-import moreMenu from "../../assets/icons/more-menu.png";
+import PropTypes from "prop-types";
+import { navigate } from "@reach/router";
 
-const Nav = () => {
+const Nav = ({ brandLogo, name, showMenu, moreMenu }) => {
   return (
     <nav className="nav">
       <div className="container nav__container">
@@ -10,18 +10,27 @@ const Nav = () => {
             className="nav__brand-logo"
             src={brandLogo}
             alt="Brand-Logo"
-            className="nav__brand-logo"
+            onClick={() => navigate("/")}
           />
-          <h1 className="nav__brand-name">Stack Shopping</h1>
+          <h1 className="nav__brand-name">{name}</h1>
         </div>
-        <div className="nav__menu">
-          <div className="nav__menu-items">
-            <img className="nav__menu-icon" src={moreMenu} alt="More Menu" />
+        {showMenu && (
+          <div className="nav__menu">
+            <div className="nav__menu-items">
+              <img className="nav__menu-icon" src={moreMenu} alt="More Menu" />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </nav>
   );
+};
+
+Nav.propTypes = {
+  brandLogo: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  showMenu: PropTypes.bool.isRequired,
+  moreMenu: PropTypes.string.isRequired,
 };
 
 export default Nav;
