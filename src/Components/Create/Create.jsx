@@ -1,16 +1,19 @@
-import plusIcon from "../../assets/icons/plus-icon.png";
 import Suggestion from "../Suggestion/Suggestion";
+import { icons } from "../../assets/assets";
 
-const Create = ({ label, extra }) => {
+const Create = ({ value, placeholder, onChange, onKeyPress, label, extra }) => {
   return (
     <div className="add-item__relative">
       <div className="section add-item">
         <div className="add-item__input">
-          <img src={plusIcon} alt={label} className="add-item__icon" />
+          <img src={icons.plusIcon} alt={label} className="add-item__icon" />
           <input
             type="text"
             className="add-item__input-field"
-            placeholder={label}
+            placeholder={placeholder}
+            value={value}
+            onChange={onChange}
+            onKeyPress={onKeyPress}
           />
         </div>
 

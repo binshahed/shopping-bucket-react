@@ -1,26 +1,25 @@
-
 import Nav from "../../Components/Nav/Nav";
 import Create from "../../Components/Create/Create";
 import Table from "../../Components/Table/Table";
+import { brand, icons } from "../../assets/assets";
 
 const BucketPage = () => {
   return (
     <div>
-      <Nav/>
-      
-      {/* <!-- Navigation Section Ends Here -->
-        <!-- Main Section Content Starts Here --> */}
+      <Nav
+        brandLogo={brand.brandLogo}
+        name="Shopping Bucket"
+        showMenu
+        moreMenu={icons.moreMenuIcon}
+      />
+
       <main className="container">
-        {/* <!-- Add Item Section Starts --> */}
-          <Create label="Create New Bucket"/>
-        {/* <!-- Add Item Section Ends -->
-            <!-- Bucket List Table Section Starts--> */}
+        <Create label="Create New Bucket" />
+
         <div className="section table">
-         <Table/>
+          <Table />
         </div>
-        {/* <!-- Bucket List Table Section Ends--> */}
       </main>
-      {/* <!-- Main Section Content Ends Here --> */}
     </div>
   );
 };

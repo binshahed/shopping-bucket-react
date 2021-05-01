@@ -19,7 +19,7 @@ const Table = () => {
           <th>
             <div className="table__item-name">
               <input type="checkbox" name="" id="carrot" />
-              <label for="carrot">Carrots</label>
+              <label >Carrots</label>
             </div>
           </th>
           <th>
@@ -27,7 +27,7 @@ const Table = () => {
               <span
                 className="auto-grow-input"
                 role="textbox"
-                contenteditable
+                
                 aria-placeholder="500G"
               >
                 2Kg
@@ -36,7 +36,7 @@ const Table = () => {
           </th>
           <th>
             <div className="table__item-input">
-              <span className="auto-grow-input" role="textbox" contenteditable>
+              <span className="auto-grow-input" role="textbox" >
                 250
               </span>
               <span> BDT </span>
@@ -57,7 +57,7 @@ const Table = () => {
           <th>
             <div className="table__item-name">
               <input type="checkbox" name="" id="carrot" />
-              <label for="carrot">Carrots</label>
+              <label >Carrots</label>
             </div>
           </th>
           <th>
@@ -65,7 +65,7 @@ const Table = () => {
               <span
                 className="auto-grow-input"
                 role="textbox"
-                contenteditable
+                
                 aria-placeholder="500G"
               >
                 2Kg
@@ -74,7 +74,7 @@ const Table = () => {
           </th>
           <th>
             <div className="table__item-input">
-              <span className="auto-grow-input" role="textbox" contenteditable>
+              <span className="auto-grow-input" role="textbox" >
                 250
               </span>
               <span> BDT </span>
@@ -95,7 +95,7 @@ const Table = () => {
           <th>
             <div className="table__item-name">
               <input type="checkbox" name="" id="carrot" />
-              <label for="carrot">Carrots</label>
+              <label >Carrots</label>
             </div>
           </th>
           <th>
@@ -103,7 +103,7 @@ const Table = () => {
               <span
                 className="auto-grow-input"
                 role="textbox"
-                contenteditable
+                
                 aria-placeholder="500G"
               >
                 2Kg
@@ -112,7 +112,7 @@ const Table = () => {
           </th>
           <th>
             <div className="table__item-input">
-              <span className="auto-grow-input" role="textbox" contenteditable>
+              <span className="auto-grow-input" role="textbox" >
                 250
               </span>
               <span> BDT </span>
@@ -133,7 +133,7 @@ const Table = () => {
           <th>
             <div className="table__item-name">
               <input type="checkbox" name="" id="carrot" />
-              <label for="carrot">Carrots</label>
+              <label>Carrots</label>
             </div>
           </th>
           <th>
@@ -141,7 +141,7 @@ const Table = () => {
               <span
                 className="auto-grow-input"
                 role="textbox"
-                contenteditable
+                
                 aria-placeholder="500G"
               >
                 2Kg
@@ -150,7 +150,7 @@ const Table = () => {
           </th>
           <th>
             <div className="table__item-input">
-              <span className="auto-grow-input" role="textbox" contenteditable>
+              <span className="auto-grow-input" role="textbox" >
                 250
               </span>
               <span> BDT </span>

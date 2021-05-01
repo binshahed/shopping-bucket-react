@@ -1,11 +1,11 @@
+import { StoreProvider } from "easy-peasy";
 import { Helmet } from "react-helmet";
-import BucketPage from "../pages/buckets";
-import BucketsDetailPage from "../pages/buckets-details";
+import store from "../store";
 import AppRouter from "./AppRouter";
 
 function App() {
   return (
-    <div className="App">
+    <StoreProvider store={store}>
       <Helmet>
         <link
           href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,500&display=swap"
@@ -17,8 +17,8 @@ function App() {
         />
       </Helmet>
 
-      <AppRouter/>
-    </div>
+      <AppRouter />
+    </StoreProvider>
   );
 }
 
