@@ -14,7 +14,7 @@ const BucketPage = () => {
       />
 
       <main className="container">
-        <Create label="Create New Bucket" />
+        <Create showSuggestions label="Create New Bucket" />
 
         <div className="section table">
           <Table />

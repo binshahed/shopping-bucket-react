@@ -1,7 +1,17 @@
 import Suggestion from "../Suggestion/Suggestion";
 import { icons } from "../../assets/assets";
+import SearchOverlay from "./SearchOverlay";
 
-const Create = ({ value, placeholder, onChange, onKeyPress, label, extra }) => {
+const Create = ({
+  value,
+  placeholder,
+  onChange,
+  onKeyPress,
+  label,
+  extra,
+  searchOverlay,
+  showSuggestions,
+}) => {
   return (
     <div className="add-item__relative">
       <div className="section add-item">
@@ -17,9 +27,11 @@ const Create = ({ value, placeholder, onChange, onKeyPress, label, extra }) => {
           />
         </div>
 
+        {searchOverlay && <SearchOverlay />}
+
         <div className="horizontal-line"></div>
         {/* <!-- Add from Suggestion Section Starts Here --> */}
-        {extra && <Suggestion />}
+        {showSuggestions && <Suggestion />}
         {/* <!-- Add from Suggestion Section Ends Here --> */}
         {/* <!-- Add Item Section Starts Ends --> */}
       </div>
